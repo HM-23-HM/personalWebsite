@@ -1,0 +1,106 @@
+<body>
+
+    <div class="btnContainer">
+        <button class="nav" (click)='changeState("about")'>About Me</button>
+        <button class="nav" (click)='changeState("work")'>Work</button>
+        <button class="nav" (click)='changeState("books")'>Books</button>
+        <button class="nav" (click)='changeState("contact")'>Contact</button>    
+    </div>
+
+    <div *ngIf="about">
+    <h1>Who is Hodeem?</h1>
+        
+        <p>I'm a mechanical engineer, and up until 2020 a fresh pair of Hanes boxers was the only soft-wear I cared about.</p>
+        <p>However, mobile and web development now sets me on fire and I'm excited to see what the future holds in this field.</p>
+        
+        <p>So, if your company designs impactful products or services, I'd love to be a part of the team.</p> 
+        
+        <p>Besides work, I started a non-profit because I want to create a reading culture in my home country of Jamaica (<a href="https://www.instagram.com/readjamaica/" target="_blank">ReadJamaica</a>) </p>
+        <p>Finally, I like to spend my down-time reading books, watching series, and learning new things.</p>
+        
+    </div>
+
+    <div *ngIf="work">
+
+        <h1>What do I do?</h1>
+
+        <div>
+            <p>I build dynamic websites using the front-end trinity of HTML, CSS and Javascript along with a variety of related libraries, frameworks and back-end building blocks.</p>
+            <p>With each project I challenge myself to not only solve a worthwhile problem or create value for the user, but to also learn a new library, framework or a better way of doing things.</p>
+            <p>Below is the first project that I've accomplished to date. You should revisit periodically for updates:</p>
+        </div>
+
+        <div class="projectContainer">
+            <button class="btn btn-lg btn-outline-primary btnFarmgate" (click)="open(mymodal)">FarmgateJam</button>
+                    
+        </div>
+
+        
+   
+        <ng-template #mymodal let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">FarmgateJam</h4>
+            <button type="button" class="close button" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        
+        <div class="modal-body">
+    
+        <p>I wanted to analyze farmgate data provided by a local agricultural institution, but the experience was very frustrating (<a href="http://reports.ja-mis.com/query_price_data_archiverpt.php" target="_blank">I want to be frustrated too</a>).</p> 
+        <p>As it turns out, I wasn't the only person who felt this way.</p>
+        <p>So, for my first project I decided to build a website that would make it easier to analyze and visualize the data.</p> 
+        <img class="gif" src="../img/farmgate2.gif">
+        <p>The feedback (<a href="https://twitter.com/HMCodes/status/1379454456929079298?s=20" target="_blank">See Feedback on Twitter</a>)
+            showed that I still have room for improvement, but it's comforting to know that I accomplished my goal of designing a better user experience.</p>
+        
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark button" (click)="modal.close('Save click')">Ok</button>
+        </div>
+        </ng-template>
+        
+    
+    
+    </div>
+
+
+    <div *ngIf="books">
+
+        <h1>Why do I read?</h1>
+
+        <p>I try to read books that expand my worldview, deepen my understanding of a topic or encourage me to think differently.</p> 
+        <p>My favourite non-technical books overwhelmingly fall in the social sciences (psychology, history etc.).</p>
+        <p>If you think we have similar tastes in books, I'd be glad to hear your book recommendations.</p>
+        <p>Below are some of the books I've read (or re-read) this year which ticked one of the three aims indicated above.</p> 
+        
+        <div>
+            <h4 class="title">Sapiens: A Brief History of Humankind</h4>
+            <p class="author">by Yuval Noah Harari</p>
+        </div>
+        
+        <div>
+            <h4 class="title">Outliers</h4> 
+            <p class="author">by Malcolm Gladwell</p>
+        </div>
+        
+        <div>
+            <h4 class="title">Laws of UX: Using Psychology to Design Better Products &amp; Services</h4>
+            <p class="author">by Jon Yablonski</p>
+        </div>
+        
+
+    </div>
+
+        <div *ngIf="contact">
+        <h1>How to reach me?</h1>
+
+        <div class="contact"><a href="https://twitter.com/HMCodes" target="_blank">Follow me on Twitter</a></div>
+        <div class="contact"><a href="mailto:miller.hodeem@gmail.com" target="_blank">Send me an email</a></div>
+        <div class="contact"><a href="https://github.com/HM-23-HM" target="_blank">See my Github page</a></div>       
+           
+    </div>
+
+
+</body>
+

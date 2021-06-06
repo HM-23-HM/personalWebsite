@@ -1,0 +1,121 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  font-size: 3.5vw;
+  padding: 20px;
+  background: transparent !important;
+}
+
+html {
+  background-image: url("../img/landing_resized.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button {
+  display: inline-block;  
+  background-color: #003d5b;
+  color: #fcedd2;
+  border-radius: 15%;
+  border: #fcedd2 2px solid;
+}
+
+.nav {
+  font-size: 4.5vw;
+  color: #faf8f7;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline #C65B7C 2px;
+   }
+
+.nav:active {
+  transform: translateY(4px);
+}
+
+
+h1, .modal-title {
+  color: #4271ad;
+}
+
+.modal-header, .modal-footer {
+  background-color: #faf4e8;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+p, .modal-body {
+  color: #2C365E;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.gif {
+  width: 80%;
+}
+
+.btnFarmgate {
+  color: #C65B7C;
+  background-color: transparent;
+}
+
+.feedback {
+  width: 100%;
+}
+
+h4 {
+  color: #95a3de;
+}
+
+h5 {
+  color:#636b8f;
+  margin: 0px !important;
+}
+
+.title {
+  margin: 0px;
+}
+
+.author {
+  font-style: italic;
+}
+
+.projectCcontainer {
+  width: auto;
+}
+
+.projectImage {
+  display: block;
+  width: 25%;
+  height: 100px;
+}
+
+/* .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.projectContainer:hover .projectImage {
+  opacity: 0.3;
+}
+
+.projectContainer:hover .middle {
+  opacity: 1;
+}
+
+.contact {
+  margin-top: 30px;
+}
